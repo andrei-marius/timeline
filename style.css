@@ -21,17 +21,21 @@ body {
   font-family: "Roboto", sans-serif;
   color: white;
 }
+
 p,
 h1,
 #topbar {
   color: white;
 }
+
 marquee {
   color: var(--purple-color);
 }
-p + p {
+
+p+p {
   margin: 0 0 15px 0;
 }
+
 h1,
 #topbar {
   font-size: 15px;
@@ -41,10 +45,12 @@ h1 {
   margin: 0;
   padding-left: 1em;
 }
+
 h2,
 h3 {
   color: var(--blue-color);
 }
+
 main {
   height: calc(100vh - 173px - 60px);
   padding: 1rem 0;
@@ -161,14 +167,15 @@ footer {
   font-weight: bold;
   margin: 0 0 15px 0;
 }
+
 #content {
   display: grid;
   grid-template-columns: 35% 30% 1fr;
   grid-template-rows: max-content 0.5fr 1fr;
   grid-template-areas:
-        "top top top"
-        "img headline about"
-        "img player about";
+    "top top top"
+    "img headline about"
+    "img player about";
   width: 70%;
   height: 80%;
   max-height: 720px;
@@ -337,9 +344,11 @@ audiobars
   transform-origin: bottom;
   will-change: transform;
 }
-.audiobar + .audiobar {
+
+.audiobar+.audiobar {
   margin-left: 5px;
 }
+
 /***************************
 
   SVG Animation
@@ -353,6 +362,7 @@ audiobars
   --time: 1s;
   opacity: var(--fade-in);
 }
+
 #masking rect:nth-child(1) {
   animation: blink var(--time) infinite;
 }
@@ -447,10 +457,10 @@ audiobars
     grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
     grid-template-rows: max-content 0.5fr 0.3fr 0.5fr;
     grid-template-areas:
-            "top top top top"
-            ". img headline ."
-            ". img player ."
-            ".about about .";
+      "top top top top"
+      ". img headline ."
+      ". img player ."
+      ".about about .";
     width: 70%;
   }
 
@@ -464,10 +474,10 @@ audiobars
     grid-template-columns: 0.1fr 0.7fr 1fr 0.1fr;
     grid-template-rows: max-content 0.5fr 0.3fr 0.5fr;
     grid-template-areas:
-            "top top top top"
-            ". img headline ."
-            ". player player ."
-            ".about about .";
+      "top top top top"
+      ". img headline ."
+      ". player player ."
+      ".about about .";
     width: 80%;
   }
 

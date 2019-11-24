@@ -6,13 +6,13 @@ let dataLoaded = null;
 
 function getData() {
   fetch(dataLink, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json; charset=uf-8",
-      "x-apikey": "5dcad81864e7774913b6ebd3",
-      "cache-control": "no-cache"
-    }
-  })
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json; charset=uf-8",
+        "x-apikey": "5dcad81864e7774913b6ebd3",
+        "cache-control": "no-cache"
+      }
+    })
     .then(result => result.json())
     .then(res => {
       const data = res.sort((a, b) =>
@@ -41,7 +41,7 @@ function populateInfobox(data) {
   document.querySelector("#modalOrigin").innerHTML = data.origin;
   document.querySelector("#modalInfo").innerHTML = data.info;
   let arrParah = data.info.split(". ");
-  arrParah.forEach(function(paragraph) {
+  arrParah.forEach(function (paragraph) {
     let newParah = document.createElement("p");
 
     newParah.textContent = paragraph;
@@ -102,7 +102,7 @@ function createInitialTimeline(dataCircles) {
   // }, 1000);
 }
 
-$(document).on("click mousewheel DOMMouseScroll", ".circle", function(e) {
+$(document).on("click mousewheel DOMMouseScroll", ".circle", function (e) {
   if ($(this).hasClass("main")) {
     return;
   }
@@ -145,7 +145,7 @@ function adjustTimeline(size) {
     transition: "transform 1s",
     transform: "translateX(" + size + "%)"
   });
-  setTimeout(function() {
+  setTimeout(function () {
     $(".timeline_circles").css({
       transition: "none"
     });
