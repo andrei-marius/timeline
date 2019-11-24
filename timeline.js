@@ -39,7 +39,8 @@ function populateInfobox(data) {
   document.querySelector("#modalGenre").innerHTML = data.genre;
   document.querySelector("#modalDate").innerHTML = data.year;
   document.querySelector("#modalOrigin").innerHTML = data.origin;
-  const arrParah = data.info.split(". ");
+  document.querySelector("#modalInfo").innerHTML = data.info;
+  let arrParah = data.info.split(". ");
   arrParah.forEach(function(paragraph) {
     let newParah = document.createElement("p");
 
