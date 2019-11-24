@@ -71,6 +71,7 @@ header {
   margin: 0 auto;
   background: var(--gray-color);
   position: relative;
+  overflow: hidden;
 }
 
 #timeline-top {
